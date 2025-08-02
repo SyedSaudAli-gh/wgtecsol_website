@@ -1,0 +1,69 @@
+import React from 'react'
+import Banner from '../components/banner'
+import { banner } from '../components/bannerData'
+import Into from './into';
+import Current_Openings from './current_Openings';
+import SquareUpHero from '../about/squareUpHero';
+
+const sections = [
+    {
+        heading: "Welcome to SquareUp, where talent meets opportunity!",
+        description: "At SquareUp, we believe that the success of our agency lies in the talent, passion, and dedication of our team members. We are a digital product agency that thrives on innovation, creativity, and collaboration. If you're ready to make a difference and contribute to cutting-edge projects, we invite you to explore career opportunities with us.",
+        boxText: "Why Work at SquareUp?",
+    },
+    {
+        heading: "Current Openings",
+        description: "We are always on the lookout for talented individuals who are passionate about creating exceptional digital experiences. Whether you're a designer, engineer, project manager, or have skills that align with our agency's mission, we encourage you to explore our open positions.",
+    }
+];
+
+const features = [
+    {
+        title: "Innovative and Impactful Projects",
+        desc: "At SquareUp, you'll have the opportunity to work on exciting and impactful projects that shape the digital landscape. From designing intuitive user interfaces to developing robust software solutions, you'll be part of a team that creates products that make a difference."
+    },
+    {
+        title: "Supportive Environment",
+        desc: "At SquareUp, you'll have the opportunity to work on exciting and impactful projects that shape the digital landscape. From designing intuitive user interfaces to developing robust software solutions, you'll be part of a team that creates products that make a difference."
+    },
+    {
+        title: "Continuous Learning and Growth",
+        desc: "We believe in investing in our team's growth and development. We provide opportunities for continuous learning, whether it's through workshops, training programs, or attending industry conferences. At SquareUp, you'll have the chance to expand your skill set and stay up-to-date with the latest trends and technologies."
+    },
+    {
+        title: "Challenging and Rewarding Work",
+        desc: "Our projects are challenging, but the rewards are even greater. We tackle complex problems and push ourselves to deliver innovative solutions. You'll be empowered to take ownership of your work, make a real impact, and see your ideas come to life."
+    }
+];
+
+function Page() {
+    return (
+        <>
+            <Banner
+                bgImage={banner[4].bgImage}
+                heading={banner[4].heading}
+                subheading={banner[4].subheading}
+            />
+            <Into section={sections[0]} />
+            <div className="min-h-screen flex items-center justify-center ">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+                    {features.map((feature, idx) => (
+                        <div
+                            key={idx}
+                            className="p-10 flex flex-col gap-8"
+                        >
+                            <h2 className="text-[40px] text-[#D8FF99] mb-4">{feature.title}</h2>
+                            <hr className="border-[#262626] mb-6" />
+                            <p className="text-[#98989A]">{feature.desc}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <Into section={sections[1]} />
+            <Current_Openings />
+            <SquareUpHero />
+        </>
+    )
+}
+
+export default Page
