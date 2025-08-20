@@ -3,6 +3,9 @@ import { Barlow } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import AOSInit from "./components/AOSInit";
+import 'aos/dist/aos.css';
+import BackToTop from "./components/backToTop";
 
 const barlow = Barlow({
   subsets: ['latin'],
@@ -25,10 +28,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${barlow.className} bg-black`}>
+    <html lang="en" className="scroll-smooth">
+      <body id="top" className={`${barlow.className} bg-black`}>
         <Navbar />
+        <AOSInit />
         {children}
+        <BackToTop />
         <Footer />
       </body>
     </html>

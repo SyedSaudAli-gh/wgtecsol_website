@@ -19,7 +19,7 @@ export default function SquareUpHero() {
         {/* Text Content */}
         <div className="text-center md:text-left">
           <h2 className="text-[20px] sm:text-[24px] md:text-[30px] font-semibold text-[#98989A] leading-tight">
-            Today, SquareUp Continues to Thrive as a Leading Digital Product Agency…..
+            Today, WGTecSol Continues to Thrive as a Leading Digital Product Agency…..
           </h2>
           <p className="mt-2 text-[#98989A] text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed">
             Combining the power of design, engineering, and project management to create transformative digital experiences. They invite you to join them on their journey and discover how they can help bring your digital ideas to life.
@@ -31,7 +31,7 @@ export default function SquareUpHero() {
       <div className="w-full mt-8 sm:mt-12 md:mt-16 flex justify-center">
         <div className="w-full bg-[#181818] rounded-[16px] flex flex-col lg:flex-row items-stretch lg:items-center px-4 sm:px-6 md:px-10 py-4 sm:py-6 gap-4 md:gap-6 shadow-lg border border-[#232323]/60">
           <span className="text-[#7c7c7c] text-[0.9rem] sm:text-[1rem] md:text-[1.1rem] font-medium flex items-center mb-2 lg:mb-0 lg:w-[260px] text-center lg:text-left">
-            Welcome to SquareUp
+            Welcome to WGTecSol
           </span>
           <div className="flex-1 flex items-center">
             <span className="bg-[#232323] rounded-[10px] px-3 sm:px-4 py-2 sm:py-3 w-full text-[#e5e5e5] text-[0.9rem] sm:text-[1rem] md:text-[1.1rem] font-medium text-center lg:text-left">

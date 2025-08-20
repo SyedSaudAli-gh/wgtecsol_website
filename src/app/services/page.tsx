@@ -10,7 +10,7 @@ const sections = [
   {
     heading: "Design",
     description:
-      "At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; It's about creating seamless and intuitive user experiences.",
+      "At WGTecSol, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; It's about creating seamless and intuitive user experiences.",
     boxText: "Our design services include:",
     grid: <ServicesGrid data={[
       ...services.find(s => s.section === "User Experience (UX) Design")?.items || [],

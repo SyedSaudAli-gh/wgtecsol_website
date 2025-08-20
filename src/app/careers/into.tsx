@@ -12,7 +12,7 @@ type IntoProps = {
 
 function Into({ section }: IntoProps) {
   return (
-    <div className='w-auto h-auto mt-16'>
+    <div  className='w-auto h-auto mt-16'>
       <section className="pt-4 md:pt-6 pb-8 md:pb-10">
         <div className="max-w-[1500px] mx-auto px-4 md:px-6">
           <h1 className="text-4xl md:text-[50px] mb-5">

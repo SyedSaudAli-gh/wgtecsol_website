@@ -2,8 +2,9 @@ import React from 'react'
 import Banner from "../components/banner";
 import { banner } from "../components/bannerData";
 import Image from 'next/image';
-import About from './about';
+import Our_Story from './our_story';
 import SquareUpHero from './squareUpHero';
+import Our_Teams from './our_teams';
 
 function Page() {
     return (
@@ -18,10 +19,10 @@ function Page() {
                     {/* Left: Text */}
                     <div className="w-full lg:w-1/2 flex flex-col justify-center">
                         <h2 className="text-white text-3xl md:text-5xl font-bold mb-8">
-                            About SquareUp
+                            About WGTecSol
                         </h2>
                         <p className="text-gray-200 text-base md:text-lg font-medium leading-relaxed max-w-xl">
-                            SquareUp is a digital product agency that is passionate about crafting exceptional digital experiences. We specialize in design, engineering, and project management, helping businesses thrive in the digital landscape. At SquareUp, we follow a structured and collaborative process to ensure the successful delivery of exceptional digital products. Our process combines industry best practices, creative thinking, and a client-centric approach.
+                            WGTecSol is a digital product agency that is passionate about crafting exceptional digital experiences. We specialize in design, engineering, and project management, helping businesses thrive in the digital landscape. At WGTecSol, we follow a structured and collaborative process to ensure the successful delivery of exceptional digital products. Our process combines industry best practices, creative thinking, and a client-centric approach.
                         </p>
                     </div>
                     {/* Right: Image */}
@@ -57,9 +58,9 @@ function Page() {
                                 </div>
                                 {/* Centered Logo Box (sabse upar) */}
                                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                                    <div className="w-[120px] h-[120px] rounded-2xl flex items-center justify-center bg-transparent">
+                                    <div className="w-[200px] h-[120px] rounded-2xl flex items-center justify-center bg-transparent">
                                         <Image
-                                            src="/images/Logo.png"
+                                            src="/images/WGTecSol logo.png"
                                             alt="Logo"
                                             fill
                                             className="object-contain"
@@ -72,7 +73,8 @@ function Page() {
                     </div>
                 </div>
             </section>
-            <About />
+            <Our_Story />
+            <Our_Teams />
             <SquareUpHero />
         </>
     )

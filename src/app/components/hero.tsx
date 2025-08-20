@@ -22,7 +22,9 @@ export const Hero: React.FC<HeroProps> = ({ onWorksClick, onContactClick }) => {
     ];
 
     return (
-        <main className="relative flex flex-col items-center w-full min-h-screen pt-28 max-md:min-h-[600px] max-md:pt-20 max-sm:min-h-[500px] max-sm:pt-[60px] overflow-hidden bg-black">
+        <main
+            data-aos="fade-right"
+            className="relative flex flex-col items-center w-full min-h-screen pt-28 max-md:min-h-[600px] max-md:pt-20 max-sm:min-h-[500px] my-10 max-sm:pt-[60px] overflow-hidden bg-black">
 
 
             <div className="absolute inset-0 z-0 pointer-events-none">
@@ -80,25 +82,22 @@ export const Hero: React.FC<HeroProps> = ({ onWorksClick, onContactClick }) => {
                         className="text-neutral-800 text-lg font-normal bg-[#9EFF00] hover:bg-[#8CE600] px-7 py-4 rounded-[10px] transition-colors"
                         aria-label="Get in touch with our team"
                     >
-                        <Link href="/contact" >
-                            Contact Us
+                        <Link href="https://whatsapp.com/channel/0029Vb5tzEuLdQeYEKzLDg45" target='_blank' >
+                            Updates
                         </Link>
 
                     </button>
                 </div>
             </div>
-
-
-
             <div className="absolute bottom-0 left-0 w-full z-0 pointer-events-none">
                 <Image
                     src="/images/Abstract-Design.png"
                     alt="3D Graph"
                     className="w-full object-cover"
                     style={{ maxHeight: 350 }}
-                    width={1920} 
-                    height={350} 
-                    priority 
+                    width={1920}
+                    height={350}
+                    priority
                 />
             </div>
         </main>

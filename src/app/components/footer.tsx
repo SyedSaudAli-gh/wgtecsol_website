@@ -3,43 +3,48 @@ import Image from "next/image";
 import Link from "next/link";
 import {
     FaFacebookF,
-    FaTwitter,
+
     FaLinkedinIn,
     FaEnvelope,
     FaPhoneAlt,
     FaMapMarkerAlt,
+    FaInstagram,
+    FaWhatsapp,
 } from "react-icons/fa";
 
 export default function Footer() {
     return (
         <footer className="w-full h-auto min-h-[335px] flex flex-col justify-between py-10 px-4 md:px-10 lg:px-24">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+                <Link href="/" >
 
-                <div className="flex items-center gap-3 mb-4 lg:mb-0">
-                    <div className="flex items-center justify-center">
-                        <Image
-                            src="/images/Logo.png"
-                            alt="Logo"
-                            width={64}
-                            height={64}
-                            className="p-2"
-                        />
+                    <div className="flex flex-col sm:flex-row items-center mb-4 lg:mb-0 sm:-space-x-5">
+                        <div className="flex items-center justify-center">
+                            <Image
+                                src="/images/Logo.png"
+                                alt="Logo"
+                                width={100}
+                                height={80}
+                                className="p-2"
+                            />
+                        </div>
+                        <span className="text-white text-xl md:text-2xl font-semibold -mt-2 sm:mt-0">
+                            WGTecSol
+                        </span>
                     </div>
-                    <span className="text-white text-xl md:text-2xl font-semibold">
-                        SquareUp
-                    </span>
-                </div>
+                </Link>
 
 
-                <nav className="flex flex-wrap justify-center gap-4 md:gap-8">
+                <nav className="flex flex-wrap justify-center gap-4  md:gap-8">
                     {[
                         "Home",
                         "Services",
                         "Work",
                         "Process",
                         "About",
+                        "Blog",
                         "Careers",
-                        "Contact",
+
                     ].map((item) => (
                         <Link
                             key={item}
@@ -58,22 +63,28 @@ export default function Footer() {
                     </span>
                     <div className="flex gap-2 md:gap-4">
                         <a
-                            href="#"
+                            href="https://www.facebook.com/people/WG-Tecsol/61572868466794/?rdid=WvSIi1vsiwSgi6Hq&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19mxj5nRmG%2F" target="_blank"
                             className="bg-[#232323] rounded-lg w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:bg-lime-400 transition group"
                         >
                             <FaFacebookF className="text-lime-400 text-xl md:text-2xl transition group-hover:text-black" />
                         </a>
                         <a
-                            href="#"
+                            href="https://www.instagram.com/wg.tecsol/" target="_blank"
                             className="bg-[#232323] rounded-lg w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:bg-lime-400 transition group"
                         >
-                            <FaTwitter className="text-lime-400 text-xl md:text-2xl transition group-hover:text-black" />
+                            <FaInstagram className="text-lime-400 text-xl md:text-2xl transition group-hover:text-black" />
                         </a>
                         <a
-                            href="#"
+                            href="https://www.linkedin.com/company/wgtecsol/posts/?feedView=all" target="_blank"
                             className="bg-[#232323] rounded-lg w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:bg-lime-400 transition group"
                         >
                             <FaLinkedinIn className="text-lime-400 text-xl md:text-2xl transition group-hover:text-black" />
+                        </a>
+                        <a
+                            href="https://www.whatsapp.com/channel/0029Vb5tzEuLdQeYEKzLDg45" target="_blank"
+                            className="bg-[#232323] rounded-lg w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:bg-lime-400 transition group"
+                        >
+                            <FaWhatsapp className="text-lime-400 text-xl md:text-2xl transition group-hover:text-black" />
                         </a>
                     </div>
                 </div>
@@ -83,33 +94,41 @@ export default function Footer() {
             <div className="border-t border-[#232323] my-6"></div>
 
 
-            <div className="flex flex-col md:flex-row justify-between md:items-end items-center gap-6">
-                <div className="flex flex-col md:flex-row w-full md:w-2/3 gap-4 md:gap-0 items-center">
-
-                    <div className="flex items-center gap-2 border-b border-[#232323] pb-2 w-full md:w-1/3 justify-center md:justify-start">
-                        <FaEnvelope className="text-lime-400 text-lg md:text-xl" />
-                        <span className="text-white text-sm md:text-base font-medium text-center md:text-left">
-                            hello@squareup.com
+            <div className="flex flex-col lg:flex-row justify-between lg:items-end items-center gap-6">
+                {/* Parent with single bottom border */}
+                <div className="flex flex-col sm:flex-row flex-wrap lg:flex-nowrap w-full lg:w-2/3 gap-4 items-center border-b border-[#232323] pb-2">
+                    <div className="flex items-center gap-2 w-full sm:w-auto lg:w-1/3 justify-center lg:justify-start">
+                        <FaEnvelope className="text-lime-400 text-lg flex-shrink-0" />
+                        <span className="text-white text-sm md:text-base font-medium break-all">
+                            <Link href="mailto:wgtecsol@gmail.com" className="hover:underline" aria-label="Email wgtecsol@gmail.com">
+                                wgtecsol@gmail.com
+                            </Link>
                         </span>
                     </div>
 
-                    <div className="flex items-center gap-2 border-b border-[#232323] pb-2 w-full md:w-1/3 justify-center md:justify-start">
-                        <FaPhoneAlt className="text-lime-400 text-lg md:text-xl" />
-                        <span className="text-white text-sm md:text-base font-medium text-center md:text-left">
-                            +91 91813 23 2309
+                    <div className="flex items-center gap-2 w-full sm:w-auto lg:w-1/3 justify-center lg:justify-start">
+                        <FaPhoneAlt className="text-lime-400 text-lg flex-shrink-0" />
+                        <span className="text-white text-sm md:text-base font-medium">
+                            <Link href="https://wa.me/923053604717" target="_blank" className="hover:text-lime-400 hover:underline">
+                                +92 305 3604717
+                            </Link>
+                            <br />
+                            <Link href="https://wa.me/923319991156" target="_blank" className="hover:text-lime-400 hover:underline">
+                                +92 331 9991156
+                            </Link>
                         </span>
                     </div>
 
-                    <div className="flex items-center gap-2 border-b border-[#232323] pb-2 w-full md:w-1/3 justify-center md:justify-start">
-                        <FaMapMarkerAlt className="text-lime-400 text-lg md:text-xl" />
-                        <span className="text-white text-sm md:text-base font-medium text-center md:text-left">
-                            Somewhere in the World
+                    <div className="flex items-center gap-2 w-full sm:w-auto lg:w-1/3 justify-center lg:justify-start">
+                        <FaMapMarkerAlt className="text-lime-400 text-lg flex-shrink-0" />
+                        <span className="text-white text-sm md:text-base font-medium">
+                            Everywhere in the world
                         </span>
                     </div>
                 </div>
 
-                <div className="text-gray-400 text-xs md:text-sm w-full md:w-auto text-center md:text-right">
-                    © 2023 SquareUp. All rights reserved.
+                <div className="text-gray-400 text-xs md:text-sm w-full lg:w-auto text-center lg:text-right">
+                    © 2023 WGTecSol. All rights reserved.
                 </div>
             </div>
         </footer>

@@ -9,7 +9,10 @@ type ServiceCardProps = {
 
 function ServiceCard({ image, title }:ServiceCardProps) {
   return (
-    <div className="bg-transparent border border-[#232323] rounded-lg p-6 flex flex-col items-start min-h-[160px]">
+    <div
+   data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom"
+    className=" bg-transparent border border-[#232323] rounded-lg p-6 flex flex-col items-start min-h-[160px]">
       <div className="relative w-14 h-14 mb-4">
         <div className="absolute top-0 left-0 w-14 h-14 flex items-center justify-center">
           <Image

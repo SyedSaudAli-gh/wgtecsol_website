@@ -6,23 +6,23 @@ import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid';
 const faqData = [
     {
         id: 1,
-        question: 'What services does SquareUp provide?',
+        question: 'What services does WGTecSol provide?',
         answer:
-            'SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more.',
+            'WGTecSol offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more.',
     },
     {
         id: 2,
-        question: 'How can SquareUp help my business?',
+        question: 'How can WGTecSol help my business?',
         answer: 'We work with clients to craft tailored digital solutions that solve problems and create value.',
     },
     {
         id: 3,
-        question: 'What industries does SquareUp work with?',
+        question: 'What industries does WGTecSol work with?',
         answer: 'We have worked with clients across healthcare, fintech, retail, logistics, and more.',
     },
     {
         id: 4,
-        question: 'How long does it take to complete a project with SquareUp?',
+        question: 'How long does it take to complete a project with WGTecSol?',
         answer: 'Project duration varies based on complexity, typically ranging from a few weeks to several months.',
     },
     {

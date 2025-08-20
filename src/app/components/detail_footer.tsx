@@ -14,11 +14,11 @@ interface SectionData {
 
 
 export default function DetailFooter({ data }: { data?: SectionData }) {
- 
-  const sectionsToRender = data ? [data] : []; 
+
+  const sectionsToRender = data ? [data] : [];
 
   if (sectionsToRender.length === 0) {
-    return null; 
+    return null;
   }
 
   return (
@@ -26,7 +26,7 @@ export default function DetailFooter({ data }: { data?: SectionData }) {
       {sectionsToRender.map((section, idx) => (
         <div
           key={idx}
-          className="relative w-full h-auto md:h-[597px] flex items-center justify-center overflow-hidden" // Auto height on mobile, fixed on md+
+          className="relative w-full h-auto md:h-[597px] flex items-center justify-center overflow-hidden"
         >
           {/* Background Image */}
           <Image
@@ -37,27 +37,28 @@ export default function DetailFooter({ data }: { data?: SectionData }) {
             sizes="100vw"
           />
 
-     
-          <div className="relative z-20 flex flex-col items-center justify-center w-full px-2 md:px-4"> 
-     
-            <div className="flex items-center justify-center mb-4 md:mb-8">
+
+          <div className="relative z-20 flex flex-col items-center justify-center w-full px-2 md:px-4">
+            <div className="flex items-center justify-center my-4">
               <Image
                 src={section.logo}
                 alt="Logo"
-                width={60} 
-                height={60}
-                className="rounded-xl bg-lime-400 p-2 md:p-3 shadow-lg md:w-20 md:h-20" 
+                width={250}              // intrinsic size
+                height={80}
+                sizes="(max-width: 640px) 200px, (max-width: 768px) 220px, 260px"
+                className="rounded-xl w-[300px] h-auto sm:w-[300px] md:w-[360px] object-contain"
+                priority
               />
             </div>
-          
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-4 md:mb-6 text-white">
+
+            <h1 className="text-xl sm:text-2xl md:text-4xl font-semibold text-center mb-3 md:my-8 text-white">
               {section.heading}
             </h1>
-            
-            <p className="w-full text-gray-200 text-base md:text-lg text-center mb-6 md:mb-10 max-w-full md:max-w-3xl">
+
+            <p className="w-full text-gray-200 text-sm sm:text-base md:text-lg text-center mb-5 md:mb-10 max-w-full md:max-w-3xl">
               {section.subtext}
             </p>
-           
+
             {section.buttonLink ? (
               <Link href={section.buttonLink}>
                 <button className="bg-lime-400 hover:bg-lime-300 text-black text-lg md:text-xl font-medium rounded-lg px-8 md:px-12 py-3 md:py-4 shadow-lg transition">

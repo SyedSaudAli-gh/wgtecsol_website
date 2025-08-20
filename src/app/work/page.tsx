@@ -7,7 +7,7 @@ import WorkCard from "./WorkCard";
 
 const sections = [
   {
-    heading: "At SquareUp",
+    heading: "At WGTecSol",
     description:
       "We have had the privilege of working with a diverse range of clients and delivering exceptional digital products that drive success.",
     boxText: "Here are ten examples of our notable works:",

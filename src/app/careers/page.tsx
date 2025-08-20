@@ -7,9 +7,9 @@ import SquareUpHero from '../about/squareUpHero';
 
 const sections = [
     {
-        heading: "Welcome to SquareUp, where talent meets opportunity!",
-        description: "At SquareUp, we believe that the success of our agency lies in the talent, passion, and dedication of our team members. We are a digital product agency that thrives on innovation, creativity, and collaboration. If you're ready to make a difference and contribute to cutting-edge projects, we invite you to explore career opportunities with us.",
-        boxText: "Why Work at SquareUp?",
+        heading: "Welcome to WGTecSol, where talent meets opportunity!",
+        description: "At WGTecSol, we believe that the success of our agency lies in the talent, passion, and dedication of our team members. We are a digital product agency that thrives on innovation, creativity, and collaboration. If you're ready to make a difference and contribute to cutting-edge projects, we invite you to explore career opportunities with us.",
+        boxText: "Why Work at WGTecSol?",
     },
     {
         heading: "Current Openings",
@@ -20,15 +20,15 @@ const sections = [
 const features = [
     {
         title: "Innovative and Impactful Projects",
-        desc: "At SquareUp, you'll have the opportunity to work on exciting and impactful projects that shape the digital landscape. From designing intuitive user interfaces to developing robust software solutions, you'll be part of a team that creates products that make a difference."
+        desc: "At WGTecSol, you'll have the opportunity to work on exciting and impactful projects that shape the digital landscape. From designing intuitive user interfaces to developing robust software solutions, you'll be part of a team that creates products that make a difference."
     },
     {
         title: "Supportive Environment",
-        desc: "At SquareUp, you'll have the opportunity to work on exciting and impactful projects that shape the digital landscape. From designing intuitive user interfaces to developing robust software solutions, you'll be part of a team that creates products that make a difference."
+        desc: "At WGTecSol, you'll have the opportunity to work on exciting and impactful projects that shape the digital landscape. From designing intuitive user interfaces to developing robust software solutions, you'll be part of a team that creates products that make a difference."
     },
     {
         title: "Continuous Learning and Growth",
-        desc: "We believe in investing in our team's growth and development. We provide opportunities for continuous learning, whether it's through workshops, training programs, or attending industry conferences. At SquareUp, you'll have the chance to expand your skill set and stay up-to-date with the latest trends and technologies."
+        desc: "We believe in investing in our team's growth and development. We provide opportunities for continuous learning, whether it's through workshops, training programs, or attending industry conferences. At WGTecSol, you'll have the chance to expand your skill set and stay up-to-date with the latest trends and technologies."
     },
     {
         title: "Challenging and Rewarding Work",
@@ -45,16 +45,22 @@ function Page() {
                 subheading={banner[4].subheading}
             />
             <Into section={sections[0]} />
-            <div className="min-h-screen flex items-center justify-center ">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+            <div className="min-h-screen flex items-center justify-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full items-stretch">
                     {features.map((feature, idx) => (
                         <div
                             key={idx}
-                            className="p-10 flex flex-col gap-8"
+                            data-aos="fade-up"
+     data-aos-anchor-placement="top-center"
+                            className="p-10 flex h-full flex-col gap-8 min-w-0"
                         >
-                            <h2 className="text-[40px] text-[#D8FF99] mb-4">{feature.title}</h2>
+                            <h2 className="text-2xl sm:text-3xl md:text-[40px] text-[#D8FF99] mb-4 break-words">
+                                {feature.title}
+                            </h2>
                             <hr className="border-[#262626] mb-6" />
-                            <p className="text-[#98989A]">{feature.desc}</p>
+                            <p className="text-[#98989A] break-words">
+                                {feature.desc}
+                            </p>
                         </div>
                     ))}
                 </div>
