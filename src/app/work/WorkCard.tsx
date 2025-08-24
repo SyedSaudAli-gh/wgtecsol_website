@@ -50,14 +50,14 @@ export default function WorkCard() {
                                 href={project.url.replace("htttps:/", "https://")}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-[#232323] rounded-lg p-2 hover:bg-lime-400 transition group"
+                                className="bg-[#232323] rounded-lg p-2 hover:bg-lime-400 transition group bg-[#8CE600] hover:bg-[#9eff00] active:bg-[#9eff00] transition"
                             >
                                 <Image
                                     src="/images/Icon.png"
                                     alt="External Link Icon"
                                     width={24}
                                     height={24}
-                                    className="transition group-hover:brightness-0"
+                                    className="transition group-hover:brightness-0 group-active:brightness-0 touch-manipulation"
                                 />
                             </a>
                         </div>
@@ -69,15 +69,15 @@ export default function WorkCard() {
                 ))}
             </div>
             {workCard.length > 4 && (
-                <div className="flex justify-center relative">
+                <div className="flex justify-center">
                     <button
                         onClick={() => setShowAll(!showAll)}
-                        className="absolute left-1/2 -translate-x-1/2 -top-5 z-20 bg-[#9eff00] rounded-full text-black px-6 py-3 flex items-center gap-2 transition-all duration-300 hover:bg-[#8CE600] group"
+                        className="rounded-full text-black px-6 py-3 my-2 flex items-center gap-2 duration-300 bg-[#8CE600] hover:bg-[#9eff00] active:bg-[#9eff00] transition group"
                     >
                         {showAll ? "View Less" : "View More"}
-                        <span className="group-hover:animate-bounceArrow inline-block">
+                        <span className="group-hover:animate-bounceArrow inline-block ">
                             {showAll ? (
-                                <ChevronUpIcon className="h-5 w-5" />
+                                <ChevronUpIcon className="h-5 w-5 " />
                             ) : (
                                 <ChevronDownIcon className="h-5 w-5" />
                             )}

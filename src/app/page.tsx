@@ -3,7 +3,7 @@ import { OurServicesSection } from "./components/service";
 import Components from "./components/companies";
 import FAQ from "./components/faq";
 import  ThankYouSection  from "./components/thankYouSection";
-import TestimonialsCard from './components/testimonialsCard';
+import TestimonialsCard from './components/clientsCard';
 
 
 export default function Home() {

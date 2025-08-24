@@ -3,10 +3,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ourTeamsData, { type TeamSection } from './our_teams_Data';
-import { FaLinkedinIn, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FaXTwitter } from 'react-icons/fa6';
 
 // Section config
 const sections: { key: TeamSection; title: string }[] = [
@@ -154,7 +155,7 @@ export default function Our_Teams() {
                           aria-label={`${member.name} on Twitter`}
                           className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#232323] text-white hover:text-[#9EFF00] hover:border-[#9EFF00] transition-colors"
                         >
-                          <FaTwitter className="h-4 w-4" />
+                          <FaXTwitter className="h-4 w-4" />
                           <span className="sr-only">Twitter</span>
                         </Link>
                       )}

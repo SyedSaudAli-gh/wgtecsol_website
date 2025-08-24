@@ -43,11 +43,11 @@ function ServiceCard() {
     <div className="my-6 sm:my-8 md:my-10 lg:my-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
       {services.map((service, idx) => (
         <div key={idx}
-        data-aos="zoom-in"
-         className="group flex flex-col justify-between p-6 bg-[#1f1f1f] rounded-xl h-full">
+          data-aos="zoom-in"
+          className="group flex flex-col justify-between p-6 bg-[#1f1f1f] rounded-xl h-full">
           <div className="space-y-6">
             <div className="relative w-[88px] h-[88px] rounded-lg overflow-hidden">
-              <div className="absolute inset-0 bg-[#66AFFC33] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+              <div className="absolute inset-0 bg-[#66AFFC33] opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 z-10"></div>
               <Image
                 src={service.image}
                 alt={service.alt}
@@ -63,11 +63,12 @@ function ServiceCard() {
               </p>
             </div>
           </div>
-          <button className="mt-6 bg-[#2e2e2e] text-white py-3 rounded-lg w-full hover:bg-[#3a3a3a] transition">
-            <Link href={service.link}>
-              Learn More
-            </Link>
-          </button>
+
+  <Link href={service.link} 
+  className="mt-6 text-center text-white font-semibold py-3 rounded-lg w-full bg-[#8CE600] hover:bg-[#9eff00] active:bg-[#9eff00] transition">
+    Learn More
+  </Link>
+
         </div>
       ))}
     </div>

@@ -16,15 +16,15 @@ export type TeamMember = {
 const ourTeamsData: TeamMember[] = [
   // Founders (2)
   {
-    name: "Saud Ali",
+    name: "Bilawal Ayoub",
     designation: "CEO & Founder",
-    image: "/images/team/saudAli.jpeg",
+    image: "/images/team/team1.png",
     bio: "Vision-driven founder leading WGTechSol’s growth, product strategy, and partnerships.",
     section: 'founders',
     socials: {
-      linkedin: "https://www.linkedin.com/in/saud-ali",
-      twitter: "https://twitter.com/saud_ali",
-      instagram: "https://instagram.com/saud.ali",
+      linkedin: "https://www.linkedin.com/in/bilawal",
+      twitter: "https://twitter.com/bilawal",
+      instagram: "https://instagram.com/bilawal",
     },
   },
   {

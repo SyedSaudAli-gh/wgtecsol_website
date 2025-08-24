@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function ContactForm() {
   const [budget, setBudget] = useState(1000);
-  const [selectedReason, setSelectedReason] = useState("Web development");
+  const [selectedReasons, setSelectedReasons] = useState<string[]>([]);
 
   const contactReasons = [
     "Web development",
@@ -19,6 +19,14 @@ export default function ContactForm() {
     "IoT & Networking",
     "Debugging & Testing"
   ];
+
+  const handleReasonChange = (reason:string) => {
+    if (selectedReasons.includes(reason)) {
+      setSelectedReasons(selectedReasons.filter(r => r !== reason));
+    } else {
+      setSelectedReasons([...selectedReasons, reason]);
+    }
+  };
 
   return (
     <div className="min-h-auto mt-26 sm:mt-16 md:mt-20 flex items-center justify-center px-4 sm:px-6 lg:px-8">
@@ -46,17 +54,17 @@ export default function ContactForm() {
         {/* Why Contacting */}
         <div className="bg-[#232323] rounded-lg p-4 sm:p-5 md:p-6">
           <label className="block text-white text-base sm:text-lg mb-3 sm:mb-4">
-            Why are you contacting us?
+            Why are you contacting us? (Select all that apply)
           </label>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 sm:gap-y-4 gap-x-4 sm:gap-x-6 md:gap-x-8">
             {contactReasons.map((reason, index) => (
               <label key={index} className="flex items-center space-x-2 cursor-pointer hover:text-lime-400 transition-colors">
                 <input 
-                  type="radio" 
+                  type="checkbox" 
                   name="reason" 
                   value={reason}
-                  checked={selectedReason === reason}
-                  onChange={(e) => setSelectedReason(e.target.value)}
+                  checked={selectedReasons.includes(reason)}
+                  onChange={() => handleReasonChange(reason)}
                   className="accent-lime-400 w-4 h-4" 
                 />
                 <span className="text-white text-sm sm:text-base">{reason}</span>
@@ -105,11 +113,24 @@ export default function ContactForm() {
 
         {/* Submit Button */}
         <div className="flex justify-center pt-2 sm:pt-4">
-          <button
-            type="submit"
-            className="bg-lime-400 hover:bg-lime-500 text-black font-semibold py-2.5 sm:py-3 px-8 sm:px-10 md:px-12 rounded-md text-base sm:text-lg transition-all duration-200 w-full sm:w-auto max-w-xs"
+                <button
+            className="relative block mx-auto w-full sm:w-auto
+    overflow-hidden rounded-2xl border border-gray-500 bg-transparent
+    text-xl sm:text-2xl text-white cursor-pointer
+    transition-colors duration-300
+    hover:text-black hover:border-[#9eff00]
+    focus:text-black focus:border-[#9eff00]
+    active:text-black active:border-[#9eff00]
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9eff00]
+    focus-visible:ring-offset-2 focus-visible:ring-offset-black
+    before:absolute before:inset-y-0 before:left-0 before:w-0
+    before:bg-[#9eff00] before:content-[''] before:transition-all
+    before:duration-300 before:ease-out
+    hover:before:w-full
+    focus:before:w-full
+    active:before:w-full"
           >
-            Submit
+            <span className="relative z-10 px-8 sm:px-12 md:px-16 py-2">Submit</span>
           </button>
         </div>
       </form>

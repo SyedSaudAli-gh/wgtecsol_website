@@ -19,7 +19,7 @@ export default function TrustedCompaniesSlider() {
                     <span className="text-white text-sm font-medium">Trusted By 250+ Companies</span>
                 </div>
             </div>
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-full mx-auto">
                 <Slider
                     width="150px"
                     duration={30}

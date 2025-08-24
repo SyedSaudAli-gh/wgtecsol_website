@@ -1,4 +1,4 @@
-export interface Testimonial {
+export interface Clients {
   title: string;
   description: string;
   author: string;
@@ -6,7 +6,7 @@ export interface Testimonial {
   image:string; 
 }
 
-export const testimonials: Testimonial[] = [
+export const client: Clients[] = [
   {
     title: "WGTecSol has been Instrumental in Transforming our Online Presence. ",
     description:"Their team's expertise in web development and design resulted in a visually stunning and user-friendly e-commerce platform. Our online sales have skyrocketed, and we couldn't be happier.",

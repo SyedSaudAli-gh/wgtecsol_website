@@ -60,7 +60,7 @@ function Page() {
                                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
                                     <div className="w-[200px] h-[120px] rounded-2xl flex items-center justify-center bg-transparent">
                                         <Image
-                                            src="/images/WGTecSol logo.png"
+                                            src="/images/Logo.png"
                                             alt="Logo"
                                             fill
                                             className="object-contain"

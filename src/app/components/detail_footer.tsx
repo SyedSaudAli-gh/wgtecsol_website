@@ -43,7 +43,7 @@ export default function DetailFooter({ data }: { data?: SectionData }) {
               <Image
                 src={section.logo}
                 alt="Logo"
-                width={250}              // intrinsic size
+                width={250}            
                 height={80}
                 sizes="(max-width: 640px) 200px, (max-width: 768px) 220px, 260px"
                 className="rounded-xl w-[300px] h-auto sm:w-[300px] md:w-[360px] object-contain"
@@ -60,13 +60,14 @@ export default function DetailFooter({ data }: { data?: SectionData }) {
             </p>
 
             {section.buttonLink ? (
-              <Link href={section.buttonLink}>
-                <button className="bg-lime-400 hover:bg-lime-300 text-black text-lg md:text-xl font-medium rounded-lg px-8 md:px-12 py-3 md:py-4 shadow-lg transition">
+              <Link href={section.buttonLink}
+              className="bg-[#8CE600] hover:bg-[#9eff00] active:bg-[#9eff00] transition font-semibold text-black text-lg md:text-xl font-medium rounded-lg px-8 md:px-12 py-3 md:py-4 shadow-lg transition">
+              
                   {section.buttonText}
-                </button>
+               
               </Link>
             ) : (
-              <button className="bg-lime-400 hover:bg-lime-300 text-black text-lg md:text-xl font-medium rounded-lg px-8 md:px-12 py-3 md:py-4 shadow-lg transition">
+              <button className="bg-[#8CE600] hover:bg-[#9eff00] active:bg-[#9eff00] transition text-black text-lg md:text-xl font-medium rounded-lg px-8 md:px-12 py-3 md:py-4 shadow-lg transition">
                 {section.buttonText}
               </button>
             )}

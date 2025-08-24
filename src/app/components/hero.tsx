@@ -68,25 +68,17 @@ export const Hero: React.FC<HeroProps> = ({ onWorksClick, onContactClick }) => {
 
 
                 <div className="flex flex-wrap justify-center gap-4 mt-4">
-                    <button
+                    <Link href="/work"
                         onClick={onWorksClick || (() => console.log('Navigate to works section'))}
                         className="text-white text-lg font-normal bg-[rgba(211,211,211,0.12)] border border-white hover:bg-[rgba(211,211,211,0.20)] px-7 py-4 rounded-[10px] transition-colors"
-                        aria-label="View our portfolio and previous work"
-                    >
-                        <Link href="/work">
-                            View Works
-                        </Link>
-                    </button>
-                    <button
-                        onClick={onContactClick || (() => console.log('Open contact form'))}
-                        className="text-neutral-800 text-lg font-normal bg-[#9EFF00] hover:bg-[#8CE600] px-7 py-4 rounded-[10px] transition-colors"
-                        aria-label="Get in touch with our team"
-                    >
-                        <Link href="https://whatsapp.com/channel/0029Vb5tzEuLdQeYEKzLDg45" target='_blank' >
-                            Updates
-                        </Link>
-
-                    </button>
+                        aria-label="View our portfolio and previous work">
+                        View Works
+                    </Link>
+                    <Link href="/contact" target='_blank' onClick={onContactClick || (() => console.log('Open contact form'))}
+                        className="text-neutral-800 text-lg font-normal bg-[#8CE600] hover:bg-[#9eff00] active:bg-[#9eff00] transition transition px-7 py-4 rounded-[10px] transition-colors"
+                        aria-label="Get in touch with our team">
+                        Updates
+                    </Link>
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 w-full z-0 pointer-events-none">

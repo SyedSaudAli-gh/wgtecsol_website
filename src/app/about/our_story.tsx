@@ -6,7 +6,7 @@ export default function Our_Story() {
         <section className="w-full min-h-screen px-2 sm:px-4 md:px-8">
             <h1 className=' text-[58px] ml-10 font-semibold'>Our Story</h1>
             <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-[#232323]">
-                {processData.map((step , index) => (
+                {processData.map((step, index) => (
                     <div
                         data-aos="fade-zoom-in"
                         data-aos-easing="ease-in-back"

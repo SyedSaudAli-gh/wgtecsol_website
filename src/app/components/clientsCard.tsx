@@ -3,12 +3,13 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Banner from "./banner";
 import { banner } from "./bannerData";
-import { testimonials } from "@/data/testimonialsData";
+import { client } from "@/data/clientsData";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/16/solid";
+import Link from "next/link";
 
-function TestimonialsCard() {
+function ClientsCard() {
     const [showAll, setShowAll] = useState(false);
-    const displayedTestimonials = showAll ? testimonials : testimonials.slice(0, 4);
+    const displayedTestimonials = showAll ? client : client.slice(0, 4);
 
     return (
         <>
@@ -17,21 +18,20 @@ function TestimonialsCard() {
                 heading={banner[5].heading}
                 subheading={banner[5].subheading}
             />
-            <div
-            
-             className="grid grid-cols-1 my-10 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+            <div className="grid grid-cols-1 my-10 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
                 {displayedTestimonials.map((testimonial, index) => (
-                    <div 
-                        key={index} data-aos="zoom-in-up"
-                        className="rounded-lg p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 shadow-lg hover:shadow-xl transition-all border border-[#262626]"
+                    <div
+                        key={index}
+                        data-aos="zoom-in-up"
+                        className="rounded-lg p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 shadow-lg hover:shadow-xl transition-all border border-[#262626] flex flex-col h-full"
                     >
                         <h3 className="text-[#c0e289] text-lg sm:text-xl lg:text-2xl font-bold mb-3">
                             {testimonial.title}
                         </h3>
-                        <p className="mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
+                        <p className="mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed flex-grow">
                             {testimonial.description}
                         </p>
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-auto">
                             <div className="flex items-center">
                                 {testimonial.image ? (
                                     <Image
@@ -53,18 +53,20 @@ function TestimonialsCard() {
                                     </p>
                                 </div>
                             </div>
-                            <button className="py-2 px-4 sm:px-5 lg:px-6 text-sm sm:text-base border border-white text-white rounded-md hover:bg-white hover:text-black transition-colors duration-300 w-full sm:w-auto">
+
+                            <Link href="/" className="py-2 px-4 sm:px-5 lg:px-6 text-sm sm:text-base border border-white text-white rounded-md hover:bg-[#9eff00] hover:text-black active:bg-[#9eff00] active:text-black transition-colors duration-300 w-full sm:w-auto">
                                 Open Website
-                            </button>
+                            </Link>
+
                         </div>
                     </div>
                 ))}
             </div>
-            {testimonials.length > 4 && (
+            {client.length > 4 && (
                 <div className="flex justify-center relative mt-8 sm:mt-10 lg:mt-12 mb-8">
                     <button
                         onClick={() => setShowAll(!showAll)}
-                        className="bg-[#9eff00] rounded-full text-black px-4 sm:px-6 py-2 sm:py-3 flex items-center gap-2 transition-all duration-300 hover:bg-[#8CE600] group text-sm sm:text-base"
+                        className="bg-[#9eff00] rounded-full text-black px-4 sm:px-6 py-2 sm:py-3 flex items-center gap-2 transition-all duration-300 hover:bg-[#8CE600] active:bg-[#8CE600] group text-sm sm:text-base"
                     >
                         {showAll ? "View Less" : "View More"}
                         <span className="group-hover:animate-bounceArrow inline-block">
@@ -81,4 +83,4 @@ function TestimonialsCard() {
     );
 };
 
-export default TestimonialsCard;
+export default ClientsCard;

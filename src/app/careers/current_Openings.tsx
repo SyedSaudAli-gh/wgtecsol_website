@@ -33,7 +33,7 @@ export default function Current_Openings() {
                   <span className="text-[24px] font-medium">{job.title}</span>
                   <p className="text-[#E6E6E6] text-[18px] md:text-base">{job.description}</p>
                 </div>
-                  <Link href='/wgContactForm' className="text-center bg-[#232323] hover:bg-[#333] text-white rounded-md py-4 font-medium transition cursor-pointer">
+                  <Link href='/wgContactForm' className="text-center text-black rounded-md py-4 font-semibold bg-[#8CE600] hover:bg-[#9eff00] active:bg-[#9eff00] transition cursor-pointer">
              
                   Apply Now
           

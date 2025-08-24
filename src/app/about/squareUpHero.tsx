@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SquareUpHero() {
   return (
@@ -38,9 +39,9 @@ export default function SquareUpHero() {
               Where collaboration, Expertise, and Client-Centricity Intersect to Shape the Future of Digital Innovation.
             </span>
           </div>
-          <button className="bg-[#9EFF00] hover:bg-lime-400 transition-colors text-black font-semibold rounded-[10px] px-6 sm:px-8 md:px-10 py-2 sm:py-3 text-[0.9rem] sm:text-[1rem] md:text-[1.1rem] mt-2 lg:mt-0 w-auto lg:w-auto">
+           <Link href="/contact" className="bg-[#8CE600] hover:bg-[#9eff00] active:bg-[#9eff00] transition text-black font-semibold rounded-[10px] px-6 sm:px-8 md:px-10 py-2 sm:py-3 text-[0.9rem] sm:text-[1rem] md:text-[1.1rem] mt-2 lg:mt-0 w-auto lg:w-auto">
             Start Project
-          </button>
+           </Link>
         </div>
       </div>
     </section>
