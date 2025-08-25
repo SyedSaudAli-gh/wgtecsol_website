@@ -132,7 +132,7 @@ export default function Footer() {
                     <FaPhoneAlt className="text-lime-400 text-lg shrink-0" />
                     <span className="flex flex-col text-white text-sm md:text-base font-medium text-center whitespace-nowrap">
                         <Link
-                            href="https://wa.me/923053604717"
+                            href="https://wa.me/923292125592"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="transition-colors duration-150 lg:hover:text-lime-400 lg:hover:underline focus-visible:underline"
