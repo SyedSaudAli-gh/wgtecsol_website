@@ -45,19 +45,19 @@ function Page() {
                 subheading={banner[4].subheading}
             />
             <Into section={sections[0]} />
-            <div className="min-h-screen flex items-center justify-center">
+            <div className="h-auto my-10 flex items-center justify-center">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full items-stretch">
                     {features.map((feature, idx) => (
                         <div
                             key={idx}
                             data-aos="fade-up"
-     data-aos-anchor-placement="top-center"
-                            className="p-10 flex h-full flex-col gap-8 min-w-0"
+                            data-aos-anchor-placement="top-center"
+                            className="px-6 flex h-full flex-col gap-2 "
                         >
-                            <h2 className="text-2xl sm:text-3xl md:text-[40px] text-[#D8FF99] mb-4 break-words">
+                            <h2 className="text-2xl sm:text-3xl md:text-[40px] text-[#D8FF99] break-words">
                                 {feature.title}
                             </h2>
-                            <hr className="border-[#262626] mb-6" />
+                            <hr className="border-[#262626] my-4" />
                             <p className="text-[#98989A] break-words">
                                 {feature.desc}
                             </p>

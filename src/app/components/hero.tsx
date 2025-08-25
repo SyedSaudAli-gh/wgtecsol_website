@@ -10,16 +10,16 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onWorksClick, onContactClick }) => {
-    const tags = [
-        { label: "For", highlighted: false },
-        { label: "Startups", highlighted: true },
-        { label: ",", highlighted: false },
-        { label: "Enterprise leaders", highlighted: true },
-        { label: ",", highlighted: false },
-        { label: "Media & Publishers", highlighted: true },
-        { label: "and", highlighted: false },
-        { label: "Social Good", highlighted: true },
-    ];
+    // const tags = [
+    //     { label: "For", highlighted: false },
+    //     { label: "Startups", highlighted: true },
+    //     { label: ",", highlighted: false },
+    //     { label: "Enterprise leaders", highlighted: true },
+    //     { label: ",", highlighted: false },
+    //     { label: "Media & Publishers", highlighted: true },
+    //     { label: "and", highlighted: false },
+    //     { label: "Social Good", highlighted: true },
+    // ];
 
     return (
         <main
@@ -39,14 +39,14 @@ export const Hero: React.FC<HeroProps> = ({ onWorksClick, onContactClick }) => {
             </div>
 
 
-            <div className="relative z-10 w-auto max-w-screen-xl flex flex-col items-center gap-12 px-4 text-center">
-                <h1 className="text-white font-barlow text-[68px] font-semibold max-md:text-5xl max-sm:text-[32px] leading-tight">
-                    Innovate with <br className="max-sm:hidden" /> WGTecSol in <br className="max-sm:hidden" />
+            <div className="relative z-10  w-auto max-w-screen-xl flex flex-col items-center gap-12 px-4 text-center">
+                <h1 className="text-white mb-24 font-barlow text-[68px] font-semibold max-md:text-5xl max-sm:text-[32px] leading-tight">
+                    Innovate with <br  /> WGTecSol in <br />
                     Digital Solutions
                 </h1>
 
 
-                <div className="flex flex-wrap justify-center items-center gap-1.5 bg-transparent border border-neutral-800 backdrop-blur-[6px] px-10 py-6 rounded-xl max-md:px-6 max-md:py-4 max-sm:px-4 max-sm:py-3">
+                {/* <div className="flex flex-wrap justify-center items-center gap-1.5 bg-transparent border border-neutral-800 backdrop-blur-[6px] px-10 py-6 rounded-xl max-md:px-6 max-md:py-4 max-sm:px-4 max-sm:py-3">
                     {tags.map((tag, index) => (
                         tag.highlighted ? (
                             <span
@@ -64,7 +64,7 @@ export const Hero: React.FC<HeroProps> = ({ onWorksClick, onContactClick }) => {
                             </span>
                         )
                     ))}
-                </div>
+                </div> */}
 
 
                 <div className="flex flex-wrap justify-center gap-4 mt-4">

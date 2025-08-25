@@ -41,7 +41,7 @@ export default function Footer() {
                         "Work",
                         "Process",
                         "About",
-                        "Blog",
+                        "Blogs",
                         "Careers",
                     ].map((item) => (
                         <Link
@@ -137,7 +137,7 @@ export default function Footer() {
                             rel="noopener noreferrer"
                             className="transition-colors duration-150 lg:hover:text-lime-400 lg:hover:underline focus-visible:underline"
                         >
-                            +92 305 3604717
+                            +92 329 2125592
                         </Link>
 
                         <Link

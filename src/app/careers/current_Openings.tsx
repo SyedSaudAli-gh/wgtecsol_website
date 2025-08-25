@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Current_Openings() {
   return (
-    <div className="w-full min-h-screen py-10 px-2 md:px-8">
+    <div className="w-auto min-h-screen py-10 px-4 md:px-10 ">
       {jobOpenings.map((section) => (
         <div
          data-aos="fade-up"
@@ -18,7 +18,7 @@ export default function Current_Openings() {
             {section.jobs.map((job) => (
               <div
                 key={job.title}
-                className="py-6 px-0 flex flex-col gap-6 w-full max-w-[431px] h-full"
+                className="py-6 px-6 flex flex-col gap-6 w-full max-w-[431px] h-full"
               >
                 <div className="flex flex-col gap-6 flex-grow">
                   <div className="w-[88px] h-[88px] relative">
@@ -33,7 +33,7 @@ export default function Current_Openings() {
                   <span className="text-[24px] font-medium">{job.title}</span>
                   <p className="text-[#E6E6E6] text-[18px] md:text-base">{job.description}</p>
                 </div>
-                  <Link href='/wgContactForm' className="text-center text-black rounded-md py-4 font-semibold bg-[#8CE600] hover:bg-[#9eff00] active:bg-[#9eff00] transition cursor-pointer">
+                  <Link href='/wgContactForm' className="text-center text-white rounded-md py-4 font-semibold bg-[#8CE600] hover:bg-[#9eff00] active:bg-[#9eff00] transition cursor-pointer">
              
                   Apply Now
           

@@ -12,13 +12,13 @@ type IntoProps = {
 
 function Into({ section }: IntoProps) {
   return (
-    <div  className='w-auto h-auto mt-16'>
-      <section className="pt-4 md:pt-6 pb-8 md:pb-10">
-        <div className="max-w-[1500px] mx-auto px-4 md:px-6">
+    <div  className='w-auto h-auto mt-4'>
+      <section className="py-2 md:py-4 mt-12">
+        <div className="mx-auto px-6 md:px-8">
           <h1 className="text-4xl md:text-[50px] mb-5">
             {section.heading}
           </h1>
-          <p className="text-[#E6E6E6] text-base md:text-lg leading-snug mb-6 md:mb-10 max-w-full md:max-w-[1290px]">
+          <p className="text-[#E6E6E6] text-base md:text-lg leading-snug mb-6 ">
             {section.description}
           </p>
           {section.boxText && (
