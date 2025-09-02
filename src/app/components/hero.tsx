@@ -10,16 +10,16 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onWorksClick, onContactClick }) => {
-    // const tags = [
-    //     { label: "For", highlighted: false },
-    //     { label: "Startups", highlighted: true },
-    //     { label: ",", highlighted: false },
-    //     { label: "Enterprise leaders", highlighted: true },
-    //     { label: ",", highlighted: false },
-    //     { label: "Media & Publishers", highlighted: true },
-    //     { label: "and", highlighted: false },
-    //     { label: "Social Good", highlighted: true },
-    // ];
+    const tags = [
+        { label: "For", highlighted: false },
+        { label: "Startups", highlighted: true },
+        { label: ",", highlighted: false },
+        { label: "Enterprise leaders", highlighted: true },
+        { label: ",", highlighted: false },
+        { label: "Media & Publishers", highlighted: true },
+        { label: "and", highlighted: false },
+        { label: "Social Good", highlighted: true },
+    ];
 
     return (
         <main
@@ -40,9 +40,23 @@ export const Hero: React.FC<HeroProps> = ({ onWorksClick, onContactClick }) => {
 
 
             <div className="relative z-10  w-auto max-w-screen-xl flex flex-col items-center gap-12 px-4 text-center">
-                <h1 className="text-white mb-24 font-barlow text-[68px] font-semibold max-md:text-5xl max-sm:text-[32px] leading-tight">
-                    Innovate with <br  /> WGTecSol in <br />
-                    Digital Solutions
+                <h1 className="text-white mb-6 md:mb-12 lg:mb-24 font-barlow font-semibold leading-tight flex flex-col items-center text-center">
+                    <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[68px] mb-4">
+                        Innovate with
+                    </span>
+                    <div className="relative w-full max-w-[200px] sm:max-w-[300px] md:max-w-[400px] lg:max-w-[500px] mb-4">
+                        <Image
+                            src='/images/WGTS.png'
+                            alt='WGTS'
+                            width={500}
+                            height={500}
+                            className="w-full h-auto"
+                            priority
+                        />
+                    </div>
+                    <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[68px]">
+                        In Tech Solutions
+                    </span>
                 </h1>
 
 
@@ -67,16 +81,18 @@ export const Hero: React.FC<HeroProps> = ({ onWorksClick, onContactClick }) => {
                 </div> */}
 
 
-                <div className="flex flex-wrap justify-center gap-4 mt-4">
-                    <Link href="/work"
-                        onClick={onWorksClick || (() => console.log('Navigate to works section'))}
-                        className="text-white text-lg font-normal bg-[rgba(211,211,211,0.12)] border border-white hover:bg-[rgba(211,211,211,0.20)] px-7 py-4 rounded-[10px] transition-colors"
-                        aria-label="View our portfolio and previous work">
+                <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-4 w-full max-w-md mx-auto sm:max-w-none">
+                    <Link
+                        href="/work"
+                        className="text-white text-base sm:text-lg font-normal bg-[rgba(211,211,211,0.12)] border border-white hover:bg-[rgba(211,211,211,0.20)] px-5 sm:px-7 py-3 sm:py-4 rounded-[10px] transition-colors text-center"
+                    >
                         View Works
                     </Link>
-                    <Link href="/contact" target='_blank' onClick={onContactClick || (() => console.log('Open contact form'))}
-                        className="text-neutral-800 text-lg font-normal bg-[#8CE600] hover:bg-[#9eff00] active:bg-[#9eff00] transition transition px-7 py-4 rounded-[10px] transition-colors"
-                        aria-label="Get in touch with our team">
+                    <Link
+                        href="/contact"
+                        target='_blank'
+                        className="text-neutral-800 text-base sm:text-lg font-normal bg-[#8CE600] hover:bg-[#9eff00] active:bg-[#7acc00] px-5 sm:px-7 py-3 sm:py-4 rounded-[10px] transition-colors text-center"
+                    >
                         Updates
                     </Link>
                 </div>

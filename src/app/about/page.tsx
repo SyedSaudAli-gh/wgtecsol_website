@@ -19,10 +19,14 @@ function Page() {
                     {/* Left: Text */}
                     <div className="w-full lg:w-1/2 flex flex-col justify-center">
                         <h2 className="text-white text-3xl md:text-5xl font-bold mb-8">
-                            About WGTecSol
+                            About Us – WGTecSol
                         </h2>
                         <p className="text-gray-200 text-base md:text-lg font-medium leading-relaxed max-w-xl">
-                            WGTecSol is a digital product agency that is passionate about crafting exceptional digital experiences. We specialize in design, engineering, and project management, helping businesses thrive in the digital landscape. At WGTecSol, we follow a structured and collaborative process to ensure the successful delivery of exceptional digital products. Our process combines industry best practices, creative thinking, and a client-centric approach.
+                            At WGTecSol – Word of Great Technology Solution – we believe technology has the power to transform ideas into impactful realities. Founded and led by Bilawal Ayoub (Founder & CEO), WGTecSol is a forward-thinking digital product agency dedicated to delivering innovative, scalable, and result-driven solutions that help businesses excel in today’s competitive digital landscape. 
+                            <br />
+                            <br />Our expertise spans design, engineering, and project management, enabling us to craft seamless and high-performing digital experiences tailored to the unique needs of every client. What sets us apart is our structured yet creative approach – blending industry best practices with innovation, collaboration, and a deep understanding of market trends.
+                            <br />
+                            <br />At WGTecSol, every project is more than just a service; it’s a partnership. We work hand-in-hand with our clients to transform their vision into reality, ensuring quality, efficiency, and long-term success. With a team driven by passion and precision, we aim not just to deliver digital products, but to create sustainable digital growth for businesses worldwide.
                         </p>
                     </div>
                     {/* Right: Image */}
@@ -58,12 +62,13 @@ function Page() {
                                 </div>
                                 {/* Centered Logo Box (sabse upar) */}
                                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                                    <div className="w-[200px] h-[120px] rounded-2xl flex items-center justify-center bg-transparent">
+                                    <div className="w-[120px] h-[120px] rounded-full flex items-center justify-center bg-transparent overflow-hidden">
                                         <Image
-                                            src="/images/Logo.png"
+                                            src="/images/WGTecSol_About.png"
                                             alt="Logo"
-                                            fill
-                                            className="object-contain"
+                                            width={900}
+                                            height={900}
+                                            className="object-contain rounded-full"
                                             priority
                                         />
                                     </div>

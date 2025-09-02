@@ -1,4 +1,4 @@
-export type TeamSection = 'founders' | 'co-founders' | 'heads';
+export type TeamSection = 'Director & CEO' | 'Manager' | 'heads';
 
 export type TeamMember = {
   name: string;
@@ -8,47 +8,36 @@ export type TeamMember = {
   section: TeamSection;
   socials?: {
     linkedin?: string;
-    twitter?: string; // or X
+    facebook?: string; // or X
     instagram?: string;
   };
 };
 
 const ourTeamsData: TeamMember[] = [
-  // Founders (2)
+  // Director & CEO (2)
   {
     name: "Bilawal Ayoub",
     designation: "CEO & Founder",
     image: "/images/team/team1.png",
     bio: "Vision-driven founder leading WGTechSol’s growth, product strategy, and partnerships.",
-    section: 'founders',
+    section: 'Director & CEO',
     socials: {
       linkedin: "https://www.linkedin.com/in/bilawal",
-      twitter: "https://twitter.com/bilawal",
+      facebook: "https://facebook.com/bilawal",
       instagram: "https://instagram.com/bilawal",
     },
   },
-  {
-    name: "Ali Raza",
-    designation: "Founder & Chairman",
-    image: "/images/team/ali-raza.jpg",
-    bio: "Serial entrepreneur focused on culture, client success, and long-term vision.",
-    section: 'founders',
-    socials: {
-      linkedin: "https://www.linkedin.com/in/ali-raza",
-      twitter: "https://twitter.com/ali_raza",
-      instagram: "https://instagram.com/ali.raza",
-    },
-  },
 
-  // Co-Founders (2)
+
+  // Manager (2)
   {
     name: "Haris Khan",
     designation: "Co‑Founder & CTO",
     bio: "Leads technology strategy—modern stacks, scalability, and engineering excellence.",
-    section: 'co-founders',
+    section: 'Manager',
     socials: {
       linkedin: "https://www.linkedin.com/in/haris-khan",
-      twitter: "https://twitter.com/haris_cto",
+      facebook: "https://facebook.com/haris_cto",
       instagram: "https://instagram.com/haris.cto",
     },
   },
@@ -56,10 +45,10 @@ const ourTeamsData: TeamMember[] = [
     name: "Sara Ahmed",
     designation: "Co‑Founder & COO",
     bio: "Owns operations—process, delivery, and team growth with a quality-first mindset.",
-    section: 'co-founders',
+    section: 'Manager',
     socials: {
       linkedin: "https://www.linkedin.com/in/sara-ahmed",
-      twitter: "https://twitter.com/sara_ops",
+      facebook: "https://facebook.com/sara_ops",
       instagram: "https://instagram.com/sara.ops",
     },
   },
@@ -72,7 +61,7 @@ const ourTeamsData: TeamMember[] = [
     section: 'heads',
     socials: {
       linkedin: "https://www.linkedin.com/in/maria-khan",
-      twitter: "https://twitter.com/maria_khan",
+      facebook: "https://facebook.com/maria_khan",
       instagram: "https://instagram.com/maria.khan",
     },
   },
@@ -83,7 +72,7 @@ const ourTeamsData: TeamMember[] = [
     section: 'heads',
     socials: {
       linkedin: "https://www.linkedin.com/in/hassan-ahmed",
-      twitter: "https://twitter.com/hassan_dev",
+      facebook: "https://facebook.com/hassan_dev",
       instagram: "https://instagram.com/hassan.dev",
     },
   },
@@ -95,7 +84,7 @@ const ourTeamsData: TeamMember[] = [
     section: 'heads',
     socials: {
       linkedin: "https://www.linkedin.com/in/sana-iqbal",
-      twitter: "https://twitter.com/sana_pm",
+      facebook: "https://facebook.com/sana_pm",
       instagram: "https://instagram.com/sana.pm",
     },
   },
@@ -107,7 +96,7 @@ const ourTeamsData: TeamMember[] = [
     section: 'heads',
     socials: {
       linkedin: "https://www.linkedin.com/in/umar-farooq",
-      twitter: "https://twitter.com/umar_ops",
+      facebook: "https://facebook.com/umar_ops",
       instagram: "https://instagram.com/umar.ops",
     },
   },

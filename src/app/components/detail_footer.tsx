@@ -39,14 +39,13 @@ export default function DetailFooter({ data }: { data?: SectionData }) {
 
 
           <div className="relative z-20 flex flex-col items-center justify-center w-full px-2 md:px-4">
-            <div className="flex items-center justify-center my-4">
+            <div className="flex items-center justify-center mb-2">
               <Image
                 src={section.logo}
                 alt="Logo"
-                width={250}            
-                height={80}
-                sizes="(max-width: 640px) 200px, (max-width: 768px) 220px, 260px"
-                className="rounded-xl w-[300px] h-auto sm:w-[300px] md:w-[360px] object-contain"
+                width={900}            
+                height={900}
+                className="rounded-xl w-[600px] h-auto sm:w-[600px] md:w-[760px] object-contain"
                 priority
               />
             </div>

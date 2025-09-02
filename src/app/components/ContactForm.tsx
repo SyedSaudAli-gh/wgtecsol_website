@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function ContactForm() {
   const [budget, setBudget] = useState(1000);
   const [selectedReasons, setSelectedReasons] = useState<string[]>([]);
+  const [customReason, setCustomReason] = useState("");
 
   const contactReasons = [
     "Web development",
@@ -17,7 +18,8 @@ export default function ContactForm() {
     "Content writers",
     "Cybersecurity services",
     "IoT & Networking",
-    "Debugging & Testing"
+    "Debugging & Testing",
+    "Another"
   ];
 
   const handleReasonChange = (reason:string) => {
@@ -71,6 +73,29 @@ export default function ContactForm() {
               </label>
             ))}
           </div>
+          
+          {/* Custom input field for "Another" option with animation */}
+          <div 
+            className={`grid transition-all duration-500 ease-in-out ${
+              selectedReasons.includes("Another") 
+                ? "grid-rows-[1fr] opacity-100 mt-4 sm:mt-6" 
+                : "grid-rows-[0fr] opacity-0 mt-0"
+            }`}
+          >
+            <div className="overflow-hidden">
+              <input
+                type="text"
+                placeholder="Please specify your custom service..."
+                value={customReason}
+                onChange={(e) => setCustomReason(e.target.value)}
+                className={`w-full bg-[#1a1a1a] border border-gray-600 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-500 text-sm sm:text-base outline-none focus:border-lime-400 transition-all duration-300 ${
+                  selectedReasons.includes("Another") 
+                    ? "translate-y-0" 
+                    : "-translate-y-2"
+                }`}
+              />
+            </div>
+          </div>
         </div>
 
         {/* Budget */}
@@ -113,7 +138,7 @@ export default function ContactForm() {
 
         {/* Submit Button */}
         <div className="flex justify-center pt-2 sm:pt-4">
-                <button
+          <button
             className="relative block mx-auto w-full sm:w-auto
     overflow-hidden rounded-2xl border border-gray-500 bg-transparent
     text-xl sm:text-2xl text-white cursor-pointer

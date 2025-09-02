@@ -60,13 +60,13 @@ export default function Navbar() {
             <Image
               src="/images/Logo.png"
               alt="Logo"
-              width={40}
-              height={40}
-              className="h-[40px] w-[40px]  object-contain"
+              width={1000}
+              height={1000}
+              className="h-[50px] w-[50px]  object-contain"
             />
-            <span className="text-white font-medium text-xs sm:text-sm md:text-base lg:text-lg">
+            {/* <span className="text-white font-medium text-xs sm:text-sm md:text-base lg:text-lg">
               WGTECSOL
-            </span>
+            </span> */}
           </Link>
 
           {/* Desktop Navigation */}

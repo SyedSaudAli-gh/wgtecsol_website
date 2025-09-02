@@ -7,12 +7,12 @@ import { FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaFacebook } from 'react-icons/fa6';
 
 // Section config
 const sections: { key: TeamSection; title: string }[] = [
-  { key: 'founders', title: 'Founders' },
-  { key: 'co-founders', title: 'Co-Founders' },
+  { key: 'Director & CEO', title: 'Director & CEO' },
+  { key: 'Manager', title: 'Manager' },
   { key: 'heads', title: 'Heads of Departments' },
 ];
 
@@ -94,8 +94,8 @@ export default function Our_Teams() {
                   data-aos-duration="1500"
                   data-aos-delay={Math.min(idx * 120, 480)}
                 >
-                  {/* Avatar — only for Founders */}
-                  {member.section === 'founders' && (
+                  {/* Avatar — only for Director & CEO */}
+                  {member.section === 'Director & CEO' && (
                     <div className="relative h-28 w-28 sm:h-32 sm:w-32 rounded-full overflow-hidden bg-[#0d0d0d] ring-1 ring-[#232323] hover:ring-[#9EFF00]/40 transition-all duration-300">
                       {member.image ? (
                         <Image
@@ -132,7 +132,7 @@ export default function Our_Teams() {
 
                   {/* Socials centered */}
                   {(member.socials?.linkedin ||
-                    member.socials?.twitter ||
+                    member.socials?.facebook ||
                     member.socials?.instagram) && (
                     <div className="flex items-center justify-center gap-4 mt-2">
                       {member.socials?.linkedin && (
@@ -147,15 +147,15 @@ export default function Our_Teams() {
                           <span className="sr-only">LinkedIn</span>
                         </Link>
                       )}
-                      {member.socials?.twitter && (
+                      {member.socials?.facebook && (
                         <Link
-                          href={member.socials.twitter}
+                          href={member.socials.facebook}
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`${member.name} on Twitter`}
                           className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#232323] text-white hover:text-[#9EFF00] hover:border-[#9EFF00] transition-colors"
                         >
-                          <FaXTwitter className="h-4 w-4" />
+                          <FaFacebook className="h-4 w-4" />
                           <span className="sr-only">Twitter</span>
                         </Link>
                       )}

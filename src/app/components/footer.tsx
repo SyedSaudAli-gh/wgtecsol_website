@@ -18,7 +18,7 @@ export default function Footer() {
             {/* Top row: becomes column by default; row at 1405px+ */}
             <div className="flex flex-col min-[1405px]:flex-row items-center justify-between gap-8">
                 <Link href="/">
-                    <div className="flex flex-col sm:flex-row items-center mb-4 min-[1405px]:mb-0 ">
+                    <div className="flex flex-col items-center mb-4 min-[1405px]:mb-0 ">
                         <div className="flex items-center justify-center">
                             <Image
                                 src="/images/Logo.png"
@@ -28,7 +28,7 @@ export default function Footer() {
                                 className="p-2"
                             />
                         </div>
-                        <span className="text-white text-xl md:text-2xl font-semibold -mt-2 sm:mt-0">
+                        <span className="text-white text-xl md:text-2xl font-semibold sm:mt-0">
                             WGTecSol
                         </span>
                     </div>
@@ -128,27 +128,27 @@ export default function Footer() {
                 </div>
 
                 {/* Phone (centered) */}
-                <div className="flex items-center w-auto justify-center lg:justify-center lg:mx-auto gap-1.5 sm:gap-2 border-b border-[#232323] md:pb-0 sm:pb-5">
+                <div className="flex items-center gap-1.5 sm:gap-2 w-auto justify-center lg:justify-start border-b border-[#232323] pb-5">
                     <FaPhoneAlt className="text-lime-400 text-lg shrink-0" />
-                    <span className="flex flex-col text-white text-sm md:text-base font-medium text-center whitespace-nowrap">
+                    {/* <span className="flex flex-col text-white text-sm md:text-base font-medium text-center whitespace-nowrap"> */}
                         <Link
                             href="https://wa.me/923292125592"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="transition-colors duration-150 lg:hover:text-lime-400 lg:hover:underline focus-visible:underline"
                         >
-                            +92 329 2125592
+                            +923292125592
                         </Link>
 
-                        <Link
+                        {/* <Link
                             href="https://wa.me/923319991156"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="transition-colors duration-150 lg:hover:text-lime-400 lg:hover:underline focus-visible:underline"
                         >
-                            +92 331 9991156
-                        </Link>
-                    </span>
+                          
+                        </Link> */}
+                    {/* </span> */}
                 </div>
 
                 {/* Location */}
