@@ -54,9 +54,9 @@ function ClientsCard() {
                                 </div>
                             </div>
 
-                            <Link href="/" className="py-2 px-4 sm:px-5 lg:px-6 text-sm sm:text-base border border-white text-white rounded-md hover:bg-[#9eff00] hover:text-black active:bg-[#9eff00] active:text-black transition-colors duration-300 w-full sm:w-auto">
+                            {/* <Link href="/" className="py-2 px-4 sm:px-5 lg:px-6 text-sm sm:text-base border border-white text-white rounded-md hover:bg-[#9eff00] hover:text-black active:bg-[#9eff00] active:text-black transition-colors duration-300 w-full sm:w-auto">
                                 Open Website
-                            </Link>
+                            </Link> */}
 
                         </div>
                     </div>

@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import Submit_button from './Submit_button';
+import SkillAdd from './SkillsAdd';
 
 function Skills() {
     const levels = ["Beginner", "Intermediate", "Advanced", "Expert"];
@@ -39,46 +40,9 @@ function Skills() {
                     LEVELS
                 </div>
             </div>
+            {/* Skills List */}
+            <SkillAdd />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
-                <input
-                    className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
-                    placeholder="Skill 1"
-                />
-                <select
-                    defaultValue=""
-                    className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
-                >
-                    <option value="" disabled>
-                        Select level
-                    </option>
-                    {levels.map((lvl) => (
-                        <option key={lvl} value={lvl}>
-                            {lvl}
-                        </option>
-                    ))}
-                </select>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
-                <input
-                    className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
-                    placeholder="Skill 2"
-                />
-                <select
-                    defaultValue=""
-                    className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
-                >
-                    <option value="" disabled>
-                        Select level
-                    </option>
-                    {levels.map((lvl) => (
-                        <option key={lvl} value={lvl}>
-                            {lvl}
-                        </option>
-                    ))}
-                </select>
-            </div>
 
             <div className="space-y-4 mb-4">
                 {/* CV Upload */}

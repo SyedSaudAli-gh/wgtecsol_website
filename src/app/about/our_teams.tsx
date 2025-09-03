@@ -3,11 +3,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ourTeamsData, { type TeamSection } from './our_teams_Data';
-import { FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaLinkedinIn, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaFacebook } from 'react-icons/fa6';
+
 
 // Section config
 const sections: { key: TeamSection; title: string }[] = [
@@ -64,7 +64,7 @@ export default function Our_Teams() {
             data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500"
-            className="mt-12"
+            className="my-12"
           >
             {/* Section heading */}
             <h2
@@ -77,10 +77,10 @@ export default function Our_Teams() {
               {title}
             </h2>
 
-            {/* Cards: GRID (wrap to next line), centered, with gaps */}
+            {/* Cards: GRID with equal heights */}
             <div
               className={[
-                'mx-auto mt-6 grid gap-6 md:gap-8 justify-items-center items-start',
+                'mx-auto mt-6 grid gap-6 md:gap-8 justify-items-center',
                 containerWidth(members.length),
                 gridCols(members.length),
               ].join(' ')}
@@ -88,7 +88,7 @@ export default function Our_Teams() {
               {members.map((member, idx) => (
                 <div
                   key={member.name}
-                  className="w-full max-w-[280px] rounded-xl border border-[#232323] p-6 sm:p-7 flex flex-col items-center text-center gap-4 bg-[#0b0b0b]/40"
+                  className="w-full h-full max-w-[280px] rounded-xl border border-[#232323] p-6 sm:p-7 flex flex-col items-center text-center bg-[#0b0b0b]/40"
                   data-aos="fade-down"
                   data-aos-easing="linear"
                   data-aos-duration="1500"
@@ -96,7 +96,7 @@ export default function Our_Teams() {
                 >
                   {/* Avatar — only for Director & CEO */}
                   {member.section === 'Director & CEO' && (
-                    <div className="relative h-28 w-28 sm:h-32 sm:w-32 rounded-full overflow-hidden bg-[#0d0d0d] ring-1 ring-[#232323] hover:ring-[#9EFF00]/40 transition-all duration-300">
+                    <div className="relative h-28 w-28 sm:h-32 sm:w-32 rounded-full overflow-hidden bg-[#0d0d0d] ring-1 ring-[#232323] hover:ring-[#9EFF00]/40 transition-all duration-300 mb-4">
                       {member.image ? (
                         <Image
                           src={member.image}
@@ -116,7 +116,7 @@ export default function Our_Teams() {
                   )}
 
                   {/* Name + Designation */}
-                  <div className="space-y-1">
+                  <div className="space-y-1 mb-4">
                     <h3 className="text-white font-semibold text-lg sm:text-xl">
                       {member.name}
                     </h3>
@@ -125,25 +125,25 @@ export default function Our_Teams() {
                     </p>
                   </div>
 
-                  {/* Bio */}
-                  <p className="text-gray-300 text-sm leading-relaxed">
+                  {/* Bio - flex-grow to push socials to bottom */}
+                  <p className="text-gray-300 text-sm leading-relaxed flex-grow">
                     {member.bio}
                   </p>
 
-                  {/* Socials centered */}
+                  {/* Socials centered - mt-auto to stick to bottom */}
                   {(member.socials?.linkedin ||
                     member.socials?.facebook ||
                     member.socials?.instagram) && (
-                    <div className="flex items-center justify-center gap-4 mt-2">
+                    <div className="flex items-center justify-center gap-4 mt-6">
                       {member.socials?.linkedin && (
                         <Link
                           href={member.socials.linkedin}
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`${member.name} on LinkedIn`}
-                          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#232323] text-white hover:text-[#9EFF00] hover:border-[#9EFF00] transition-colors"
+                          className="inline-flex h-10 w-10 items-center justify-center hover:bg-lime-400 transition group shrink-0 rounded-lg bg-[#232323]"
                         >
-                          <FaLinkedinIn className="h-4 w-4" />
+                          <FaLinkedinIn className="h-4 w-4 text-lime-400 group-hover:text-black" />
                           <span className="sr-only">LinkedIn</span>
                         </Link>
                       )}
@@ -153,9 +153,9 @@ export default function Our_Teams() {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`${member.name} on Twitter`}
-                          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#232323] text-white hover:text-[#9EFF00] hover:border-[#9EFF00] transition-colors"
+                          className="inline-flex h-10 w-10 items-center justify-center hover:bg-lime-400 transition group shrink-0 rounded-lg bg-[#232323]"
                         >
-                          <FaFacebook className="h-4 w-4" />
+                          <FaFacebookF className="h-4 w-4 text-lime-400 group-hover:text-black" />
                           <span className="sr-only">Twitter</span>
                         </Link>
                       )}
@@ -165,9 +165,9 @@ export default function Our_Teams() {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`${member.name} on Instagram`}
-                          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#232323] text-white hover:text-[#9EFF00] hover:border-[#9EFF00] transition-colors"
+                          className="inline-flex h-10 w-10 items-center justify-center hover:bg-lime-400 transition group shrink-0 rounded-lg bg-[#232323]"
                         >
-                          <FaInstagram className="h-4 w-4" />
+                          <FaInstagram className="h-4 w-4 text-lime-400 group-hover:text-black" />
                           <span className="sr-only">Instagram</span>
                         </Link>
                       )}

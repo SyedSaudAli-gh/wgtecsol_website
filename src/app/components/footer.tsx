@@ -61,7 +61,7 @@ export default function Footer() {
                     </span>
                     <div className="flex flex-nowrap items-center gap-2 md:gap-4">
                         <a
-                            href="https://www.facebook.com/people/WGTecSol/61579805907255/?rdid=Uyu1KGCvFIh0z7hw&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F177gkQZKYB%2F"
+                            href="https://www.facebook.com/share/177gkQZKYB/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-[#232323] rounded-lg w-9 h-9 md:w-12 md:h-12 flex items-center justify-center hover:bg-lime-400 transition group shrink-0"
@@ -70,7 +70,7 @@ export default function Footer() {
                             <FaFacebookF className="text-lime-400 text-lg md:text-2xl transition group-hover:text-black" />
                         </a>
                         <a
-                            href="https://www.instagram.com/wg.tecsol/"
+                            href="https://www.instagram.com/wgtecsol?igsh=anQzb251Y2d3NjY1"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-[#232323] rounded-lg w-9 h-9 md:w-12 md:h-12 flex items-center justify-center hover:bg-lime-400 transition group shrink-0"
@@ -88,7 +88,7 @@ export default function Footer() {
                             <FaXTwitter className="text-lime-400 text-lg md:text-2xl transition group-hover:text-black" />
                         </a>
                         <a
-                            href="https://www.linkedin.com/company/wgtecsol/posts/?feedView=all"
+                            href="https://www.linkedin.com/company/wgtecsol-bilawalayoub/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-[#232323] rounded-lg w-9 h-9 md:w-12 md:h-12 flex items-center justify-center hover:bg-lime-400 transition group shrink-0"
@@ -97,7 +97,7 @@ export default function Footer() {
                             <FaLinkedinIn className="text-lime-400 text-lg md:text-2xl transition group-hover:text-black" />
                         </a>
                         <a
-                            href="https://www.whatsapp.com/channel/0029Vb5tzEuLdQeYEKzLDg45"
+                            href="https://whatsapp.com/channel/0029VbBK7zwHLHQScBygVQ0u"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-[#232323] rounded-lg w-9 h-9 md:w-12 md:h-12 flex items-center justify-center hover:bg-lime-400 transition group shrink-0"

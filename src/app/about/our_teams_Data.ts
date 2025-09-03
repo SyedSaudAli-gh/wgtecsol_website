@@ -22,9 +22,9 @@ const ourTeamsData: TeamMember[] = [
     bio: "Vision-driven founder leading WGTechSol’s growth, product strategy, and partnerships.",
     section: 'Director & CEO',
     socials: {
-      linkedin: "https://www.linkedin.com/in/bilawal",
-      facebook: "https://facebook.com/bilawal",
-      instagram: "https://instagram.com/bilawal",
+      linkedin: "https://www.linkedin.com/in/muhammad-bilawal-ayoub-wgtecsol?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      facebook: "https://www.facebook.com/share/19b2wd2fA5/",
+      instagram: "https://www.instagram.com/h.m.bilawal90?igsh=MThpaWRwbGZ0MGowZw==",
     },
   },
 
