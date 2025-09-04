@@ -60,9 +60,9 @@ export default function Navbar() {
             <Image
               src="/images/Logo.png"
               alt="Logo"
-              width={1000}
-              height={1000}
-              className="h-[50px] w-[50px]  object-contain"
+              width={500}
+              height={500}
+              className="h-[50px] w-[50px] object-contain"
             />
             {/* <span className="text-white font-medium text-xs sm:text-sm md:text-base lg:text-lg">
               WGTECSOL

@@ -89,7 +89,7 @@ export const Hero: React.FC<HeroProps> = ({ onWorksClick, onContactClick }) => {
                         View Works
                     </Link>
                     <Link
-                        href="/contact"
+                        href="https://www.whatsapp.com/channel/0029VbBK7zwHLHQScBygVQ0u"
                         target='_blank'
                         className="text-neutral-800 text-base sm:text-lg font-normal bg-[#8CE600] hover:bg-[#9eff00] active:bg-[#7acc00] px-5 sm:px-7 py-3 sm:py-4 rounded-[10px] transition-colors text-center"
                     >

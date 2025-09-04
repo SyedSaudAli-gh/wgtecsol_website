@@ -97,7 +97,7 @@ export default function Footer() {
                             <FaLinkedinIn className="text-lime-400 text-lg md:text-2xl transition group-hover:text-black" />
                         </a>
                         <a
-                            href="https://whatsapp.com/channel/0029VbBK7zwHLHQScBygVQ0u"
+                            href="https://wa.me/923292125592"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-[#232323] rounded-lg w-9 h-9 md:w-12 md:h-12 flex items-center justify-center hover:bg-lime-400 transition group shrink-0"

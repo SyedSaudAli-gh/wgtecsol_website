@@ -1,36 +1,31 @@
 "use client"
-import React, { useState, forwardRef } from 'react'
-import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
+import React, { useState, forwardRef, useMemo } from 'react'
+import PhoneInput, {
+  isValidPhoneNumber,
+  type Country,
+  getCountries,
+  getCountryCallingCode,
+} from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
+import en from 'react-phone-number-input/locale/en.json'
+import { parsePhoneNumberFromString } from 'libphonenumber-js'
 
-// Add custom styles for the dropdown
+// Keep your dropdown black (scoped to this component render)
 const customStyles = `
   .PhoneInputCountrySelect {
     background-color: #000000 !important;
     color: #e9ecf1 !important;
   }
-  
   .PhoneInputCountrySelect option {
     background-color: #000000 !important;
     color: #e9ecf1 !important;
   }
-  
-  /* For webkit browsers (Chrome, Safari) */
-  .PhoneInputCountrySelect::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  .PhoneInputCountrySelect::-webkit-scrollbar-track {
-    background: #1a1a1a;
-  }
-  
-  .PhoneInputCountrySelect::-webkit-scrollbar-thumb {
-    background: #4a4a4a;
-    border-radius: 4px;
-  }
+  .PhoneInputCountrySelect::-webkit-scrollbar { width: 8px; }
+  .PhoneInputCountrySelect::-webkit-scrollbar-track { background: #1a1a1a; }
+  .PhoneInputCountrySelect::-webkit-scrollbar-thumb { background: #4a4a4a; border-radius: 4px; }
 `
 
-// Stable custom input outside the component (no re-create on each render)
+// Stable custom input (prevents focus loss)
 const TailwindPhoneInputField = forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
   (props, ref) => {
     const { className = "", ...rest } = props
@@ -39,10 +34,9 @@ const TailwindPhoneInputField = forwardRef<HTMLInputElement, React.InputHTMLAttr
         ref={ref}
         {...rest}
         className={[
-          // remove default borders, let wrapper handle borders/focus
           "h-10 flex-1 bg-transparent text-[#e9ecf1] placeholder:text-[#9aa3ad]",
-          "outline-none border-0 focus:ring-0 focus:outline-none",
-          className, // keep any className passed by library
+          "outline-none border-0 focus:ring-0",
+          className,
         ].join(" ")}
       />
     )
@@ -50,18 +44,103 @@ const TailwindPhoneInputField = forwardRef<HTMLInputElement, React.InputHTMLAttr
 )
 TailwindPhoneInputField.displayName = "TailwindPhoneInputField"
 
+// Detect country from +international number
+const detectCountryFromPlus = (value?: string): Country | undefined => {
+  if (!value || value[0] !== '+') return undefined
+  try {
+    const parsed = parsePhoneNumberFromString(value)
+    return parsed?.country as Country | undefined
+  } catch { return undefined }
+}
+
 function PhoneNo() {
+  // Values
   const [homePhone, setHomePhone] = useState<string | undefined>()
   const [mobilePhone, setMobilePhone] = useState<string | undefined>()
 
+  // Selected countries (controlled)
+  const [homeCountry, setHomeCountry] = useState<Country>('PK')
+  const [mobileCountry, setMobileCountry] = useState<Country>('PK')
+
+  // Whether user manually picked a country (don't override on national input)
+  const [homeManual, setHomeManual] = useState(false)
+  const [mobileManual, setMobileManual] = useState(false)
+
+  // Validations
   const homeInvalid = !!homePhone && !isValidPhoneNumber(homePhone)
   const mobileInvalid = !!mobilePhone && !isValidPhoneNumber(mobilePhone)
 
+  // Build labels with country name and code
+  const labels = useMemo(() => {
+    const base = en as Record<string, string>
+    const l: Record<string, string> = {}
+    
+    // Get all countries and create custom labels
+    ;(getCountries() as Country[]).forEach((country) => {
+      const countryName = base[country] || country
+      const callingCode = getCountryCallingCode(country)
+      // Format: "Pakistan +92" or "United States +1"
+      l[country] = `${countryName} +${callingCode}`
+    })
+    
+    // Keep the International option if it exists
+    if (base.ZZ) {
+      l.ZZ = base.ZZ
+    }
+    
+    return l
+  }, [])
+
+  // Home handlers
+  const onHomeChange = (val?: string) => {
+    setHomePhone(val)
+
+    if (!val) {
+      setHomeManual(false)
+      setHomeCountry('PK')
+      return
+    }
+
+    const auto = detectCountryFromPlus(val)
+    if (auto && auto !== homeCountry) {
+      setHomeCountry(auto)
+    }
+  }
+
+  const onHomeCountryChange = (country?: Country) => {
+    if (country) {
+      setHomeCountry(country)
+      setHomeManual(true)
+    }
+  }
+
+  // Mobile handlers
+  const onMobileChange = (val?: string) => {
+    setMobilePhone(val)
+
+    if (!val) {
+      setMobileManual(false)
+      setMobileCountry('PK')
+      return
+    }
+
+    const auto = detectCountryFromPlus(val)
+    if (auto && auto !== mobileCountry) {
+      setMobileCountry(auto)
+    }
+  }
+
+  const onMobileCountryChange = (country?: Country) => {
+    if (country) {
+      setMobileCountry(country)
+      setMobileManual(true)
+    }
+  }
+
   return (
     <>
-      {/* Inject custom styles */}
       <style jsx global>{customStyles}</style>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-12 items-start gap-3">
         <div className="text-[#cfd6df] font-semibold pt-1.5 md:col-span-3">Phone :</div>
 
@@ -69,7 +148,7 @@ function PhoneNo() {
           {/* Home Phone */}
           <div>
             <label htmlFor="home-phone" className="block text-[#cfd6df] text-sm font-medium mb-1.5">
-              Personal Contact
+              Phone Number
             </label>
 
             <div
@@ -83,22 +162,19 @@ function PhoneNo() {
             >
               <PhoneInput
                 id="home-phone"
+                country={homeCountry}
                 international
-                defaultCountry="PK"
-                placeholder="Home Phone"
+                placeholder="Phone Number"
                 value={homePhone}
-                onChange={setHomePhone}
-                countryCallingCodeEditable={false}
-                // Make inner container flex to align select + input
+                onChange={onHomeChange}
+                onCountryChange={onHomeCountryChange}
+                countryCallingCodeEditable={true}
                 className="flex items-center gap-2 w-full"
-                // Style native country select to dark theme; remove its border
                 countrySelectProps={{
-                  className:
-                    "h-10 bg-black text-[#e9ecf1] border-0 outline-none cursor-pointer pr-1",
-                  style: { backgroundColor: '#000000' }
+                  className: "h-10 bg-black text-[#e9ecf1] border-0 outline-none cursor-pointer pr-1",
                 }}
-                // Use stable custom input (no blur on type)
                 inputComponent={TailwindPhoneInputField}
+                labels={labels}
               />
             </div>
 
@@ -110,7 +186,7 @@ function PhoneNo() {
           {/* Mobile Phone */}
           <div>
             <label htmlFor="mobile-phone" className="block text-[#cfd6df] text-sm font-medium mb-1.5">
-              Second Contact
+              Landline Number
             </label>
 
             <div
@@ -124,19 +200,19 @@ function PhoneNo() {
             >
               <PhoneInput
                 id="mobile-phone"
+                country={mobileCountry}
                 international
-                defaultCountry="PK"
-                placeholder="Mobile Phone"
+                placeholder="Landline"
                 value={mobilePhone}
-                onChange={setMobilePhone}
-                countryCallingCodeEditable={false}
+                onChange={onMobileChange}
+                onCountryChange={onMobileCountryChange}
+                countryCallingCodeEditable={true}
                 className="flex items-center gap-2 w-full"
                 countrySelectProps={{
-                  className:
-                    "h-10 bg-black text-[#e9ecf1] border-0 outline-none cursor-pointer pr-1",
-                  style: { backgroundColor: '#000000' }
+                  className: "h-10 bg-black text-[#e9ecf1] border-0 outline-none cursor-pointer pr-1",
                 }}
                 inputComponent={TailwindPhoneInputField}
+                labels={labels}
               />
             </div>
 
