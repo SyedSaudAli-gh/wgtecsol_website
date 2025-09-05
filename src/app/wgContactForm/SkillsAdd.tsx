@@ -91,7 +91,7 @@ function SkillAdd() {
                 // Edit Mode (after first completion)
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <input
-                    className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+                    className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none  focus:ring-1 focus:ring-[#9EFF00]"
                     placeholder={`Skill ${index + 1}`}
                     value={editingSkill.skill}
                     onChange={(e) => setEditingSkill({ ...editingSkill, skill: e.target.value })}
@@ -102,7 +102,7 @@ function SkillAdd() {
                       onChange={(e) => setEditingSkill({ ...editingSkill, level: e.target.value })}
                       className={`flex-1 h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border focus:outline-none ${editingSkill.skill.trim() && !editingSkill.level
                           ? "border-red-500 focus:ring-2 focus:ring-red-500/40 focus:border-red-500"
-                          : "border-[#323845] focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+                          : "border-[#323845]  focus:ring-1 focus:ring-[#9EFF00]"
                         }`}
                       aria-invalid={editingSkill.skill.trim() && !editingSkill.level ? true : undefined}
                     >
@@ -173,7 +173,7 @@ function SkillAdd() {
                 // Entry Mode (first time entry – editable without Edit button)
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <input
-                    className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+                    className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none  focus:ring-1 focus:ring-[#9EFF00]"
                     placeholder={`Skill ${index + 1}`}
                     value={row.skill}
                     onChange={(e) => updateSkill(row.id, "skill", e.target.value)}
@@ -184,7 +184,7 @@ function SkillAdd() {
                       onChange={(e) => updateSkill(row.id, "level", e.target.value)}
                       className={`flex-1 h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border focus:outline-none ${row.skill.trim() && !row.level
                           ? "border-red-500 focus:ring-2 focus:ring-red-500/40 focus:border-red-500"
-                          : "border-[#323845] focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+                          : "border-[#323845]  focus:ring-1 focus:ring-[#9EFF00]"
                         }`}
                       aria-invalid={row.skill.trim() && !row.level ? true : undefined}
                     >

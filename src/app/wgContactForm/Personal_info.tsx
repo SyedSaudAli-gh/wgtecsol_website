@@ -20,13 +20,13 @@ function Personal_info() {
         <div className="md:col-span-9 grid grid-cols-1 sm:grid-cols-2 gap-2">
           <input
             id="firstName"
-            className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+            className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-1 focus:ring-[#9EFF00]"
             placeholder="First Name"
             autoComplete="given-name"
           />
           <input
             id="lastName"
-            className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+            className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-1 focus:ring-[#9EFF00]"
             placeholder="Last Name"
             autoComplete="family-name"
           />
@@ -48,15 +48,21 @@ function Personal_info() {
                 value="government"
                 checked={idType === 'government'}
                 onChange={() => setIdType('government')}
-                className="sr-only"
+                className="sr-only "
               />
-              <div className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-300 ${idType === 'government'
-                ? 'border-sky-500 bg-sky-500/10 text-sky-400'
-                : 'border-[#323845] bg-[#0f1115] text-[#9aa3ad] hover:border-[#4a5568]'
-                }`}>
-                <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${idType === 'government' ? 'border-sky-500' : 'border-[#6b7280]'
-                  }`}>
-                  {idType === 'government' && <div className="w-2 h-2 rounded-full bg-sky-500" />}
+              <div
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-300 ${idType === 'government'
+                    ? 'border-[#9EFF00] bg-[#9EFF00]/10 text-[#9EFF00]'
+                    : 'border-[#323845] bg-[#0f1115] text-[#9aa3ad] hover:border-[#4a5568]'
+                  }`}
+              >
+                <div
+                  className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${idType === 'government' ? 'border-[#9EFF00]' : 'border-[#6b7280]'
+                    }`}
+                >
+                  {idType === 'government' && (
+                    <div className="w-2 h-2 rounded-full bg-[#9EFF00]" />
+                  )}
                 </div>
                 <span className="text-sm font-medium">Govt ID</span>
               </div>
@@ -71,13 +77,19 @@ function Personal_info() {
                 onChange={() => setIdType('passport')}
                 className="sr-only"
               />
-              <div className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-300 ${idType === 'passport'
-                ? 'border-sky-500 bg-sky-500/10 text-sky-400'
-                : 'border-[#323845] bg-[#0f1115] text-[#9aa3ad] hover:border-[#4a5568]'
-                }`}>
-                <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${idType === 'passport' ? 'border-sky-500' : 'border-[#6b7280]'
-                  }`}>
-                  {idType === 'passport' && <div className="w-2 h-2 rounded-full bg-sky-500" />}
+              <div
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-300 ${idType === 'passport'
+                    ? 'border-[#9EFF00] bg-[#9EFF00]/10 text-[#9EFF00]'
+                    : 'border-[#323845] bg-[#0f1115] text-[#9aa3ad] hover:border-[#4a5568]'
+                  }`}
+              >
+                <div
+                  className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${idType === 'passport' ? 'border-[#9EFF00]' : 'border-[#6b7280]'
+                    }`}
+                >
+                  {idType === 'passport' && (
+                    <div className="w-2 h-2 rounded-full bg-[#9EFF00]" />
+                  )}
                 </div>
                 <span className="text-sm font-medium">Passport</span>
               </div>
@@ -89,7 +101,7 @@ function Personal_info() {
               <div>
                 <input
                   id={idType === 'government' ? 'cnic' : 'passport'}
-                  className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition-all duration-300"
+                  className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-1 focus:ring-[#9EFF00] transition-all duration-300"
                   placeholder={idType === 'government' ? 'CNIC Number' : 'Passport Number'}
                   inputMode={idType === 'government' ? 'numeric' : 'text'}
                 />
@@ -101,19 +113,19 @@ function Personal_info() {
                 </label>
                 <div className="grid grid-cols-3 gap-2">
                   <input
-                    className="w-full h-9 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+                    className="w-full h-9 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-1 focus:ring-[#9EFF00]"
                     placeholder="DD"
                     inputMode="numeric"
                     maxLength={2}
                   />
                   <input
-                    className="w-full h-9 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+                    className="w-full h-9 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-1 focus:ring-[#9EFF00]"
                     placeholder="MM"
                     inputMode="numeric"
                     maxLength={2}
                   />
                   <input
-                    className="w-full h-9 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+                    className="w-full h-9 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-1 focus:ring-[#9EFF00]"
                     placeholder="YYYY"
                     inputMode="numeric"
                     maxLength={4}
@@ -139,18 +151,18 @@ function Personal_info() {
         <div className="md:col-span-9">
           <input
             id="street"
-            className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+            className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none  focus:ring-1 focus:ring-[#9EFF00]"
             placeholder="Street Name"
             autoComplete="address-line1"
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
             <input
-              className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+              className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none  focus:ring-1 focus:ring-[#9EFF00]"
               placeholder="City"
               autoComplete="address-level2"
             />
             <input
-              className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+              className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none  focus:ring-1 focus:ring-[#9EFF00]"
               placeholder="Postal Code"
               autoComplete="postal-code"
               inputMode="numeric"

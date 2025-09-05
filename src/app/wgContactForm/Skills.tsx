@@ -57,7 +57,7 @@ function Skills() {
                         {!cvFile ? (
                             <label
                                 htmlFor="cv-upload"
-                                className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-[#323845] rounded-lg cursor-pointer bg-[#0f1115] hover:bg-[#1a1d24] hover:border-sky-500/50 transition-all duration-300"
+                                className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-[#323845] rounded-lg cursor-pointer bg-[#0f1115] hover:bg-[#9EFF00]/10 hover:border-[#9EFF00]/50 transition-all duration-300"
                             >
                                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
                                     <svg
@@ -144,7 +144,7 @@ function Skills() {
                         {!pictureFile ? (
                             <label
                                 htmlFor="picture-upload"
-                                className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-[#323845] rounded-lg cursor-pointer bg-[#0f1115] hover:bg-[#1a1d24] hover:border-sky-500/50 transition-all duration-300"
+                                className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-[#323845] rounded-lg cursor-pointer bg-[#0f1115] hover:bg-[#9EFF00]/10 hover:border-[#9EFF00]/50 transition-all duration-300"
                             >
                                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
                                     <svg
@@ -215,7 +215,7 @@ function Skills() {
             </div>
 
             <label className="flex gap-3 items-start text-sm text-[#9aa3ad] mb-6">
-                <input type="checkbox" className="mt-1 h-4 w-4 accent-sky-500" />
+                <input type="checkbox" className="mt-1 h-4 w-4 accent-[#9EFF00]" />
                 <span>
                     I certify that all answers given herein are true and complete to the best of my
                     knowledge. I authorize investigation of all statements contained in this application for

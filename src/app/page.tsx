@@ -9,7 +9,7 @@ import TestimonialsCard from './components/clientsCard';
 export default function Home() {
   return (
     <>
-      
+
       <Hero />
       <OurServicesSection />
       <Components />

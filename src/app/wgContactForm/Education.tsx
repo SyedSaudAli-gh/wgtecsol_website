@@ -12,11 +12,11 @@ function Education() {
                 <div className="text-[#cfd6df] font-semibold pt-1.5 md:col-span-3">High School :</div>
                 <div className="md:col-span-9 grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <input
-                        className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+                        className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none  focus:ring-1 focus:ring-[#9EFF00]"
                         placeholder="Name"
                     />
                     <input
-                        className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+                        className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none  focus:ring-1 focus:ring-[#9EFF00]"
                         placeholder="City"
                     />
                 </div>
@@ -27,11 +27,11 @@ function Education() {
                 <div className="text-[#cfd6df] font-semibold pt-1.5 md:col-span-3">University :</div>
                 <div className="md:col-span-9 grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <input
-                        className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+                        className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none  focus:ring-1 focus:ring-[#9EFF00]"
                         placeholder="Name"
                     />
                     <input
-                        className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500"
+                        className="w-full h-10 rounded-md px-3 bg-[#0f1115] text-[#e9ecf1] border border-[#323845] placeholder-[#9aa3ad] focus:outline-none  focus:ring-1 focus:ring-[#9EFF00]"
                         placeholder="City"
                     />
                 </div>
