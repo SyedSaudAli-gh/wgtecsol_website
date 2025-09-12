@@ -1,6 +1,6 @@
 export const banner = [
   {
-    bgImage: "/images/banner.png",
+    bgImage: "/images/our_service.png",
     heading: "OUR SERVICES",
     subheading: "Transform your brand with our innovative digital solutions that captivate and engage your audience.",
   },
