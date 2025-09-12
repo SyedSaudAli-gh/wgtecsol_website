@@ -155,7 +155,7 @@ export default function Footer() {
                 <div className="flex items-center gap-1.5 sm:gap-2 w-auto justify-center lg:justify-start border-b border-[#232323] pb-5">
                     <FaMapMarkerAlt className="text-lime-400 text-lg shrink-0" />
                     <span className="text-white text-sm md:text-base font-medium whitespace-nowrap">
-                        Everywhere in the world
+                       Serving Worldwide
                     </span>
                 </div>
             </div>
